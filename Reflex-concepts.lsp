@@ -80,7 +80,7 @@
 (concept cast :constructor cast  :arguments (rtype simple-type) 
   (expression expression))
 
-(concept |!.| :constructor |!.| :arguments (operand expression))
+(concept |!.| :constructor |!.| :arguments (first expression))
 (concept |-.| :constructor |-.| :arguments (first expression))
 (concept |~.| :constructor |~.| :arguments (first expression))
 
@@ -138,7 +138,7 @@
 (concept switch-statement :constructor switch :arguments (controlling-expression expression) (cases :flatten (list case-statement)) (default :opt default-statement))
 (concept default-statement :constructor default :arguments (statements :flatten (list statement)))
 (concept-by-union integer-constant-expression expression)
-(concept case-statement :constructor case :arguments  (label integer-constant-expression) (statements :flatten (list statement)) :tags break)
+(concept case-statement :constructor rcase :arguments  (label integer-constant-expression) (statements :flatten (list statement)) :tags break)
 
 (concept statement-block :constructor block (statements :flatten (list statement)))
 
