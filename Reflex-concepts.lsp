@@ -129,9 +129,9 @@
 (concept-by-union process-oriented-statement reset-timer set-state restart-process start-process stop-current-process stop-process error-current-process current-process timeout-statement)
 
 
-(concept if-then-statement :constructor if 
+(concept if-then-statement :constructor rif 
 :arguments (condition expression) (then statement))
-(concept if-then-else-statement :constructor if-else 
+(concept if-then-else-statement :constructor rif-else 
 :arguments (condition expression) (then statement) (else statement))
 (concept-by-union if-statement if-then-statement if-then-else-statement)
 
